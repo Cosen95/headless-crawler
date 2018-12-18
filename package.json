@@ -1,0 +1,11 @@
+{
+  "name": "headless-crawler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Jack-cool/headless-crawler.git",
+  "author": "fengshuan <1263215592@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.10.0"
+  }
+}
