@@ -2,9 +2,7 @@ const puppeteer = require('puppeteer');
 const { picture } = require('./config/default');
 const srcToImg = require('./helper/srcToImg'); 
 
-puppeteer.launch({
-    headless: false,
-}).then(async browser => {
+puppeteer.launch().then(async browser => {
     const page = await browser.newPage();
     await page.goto('https://image.baidu.com/');
     console.log('go to 百度图片');
@@ -28,8 +26,8 @@ puppeteer.launch({
         });
 
         console.log(`get ${srcArr.length} images, start download`);
-        srcArr.forEach(src => {
-            srcToImg(src, picture);
+        srcArr.forEach(async (src) => {
+            await srcToImg(src, picture);
         })
     })
     
