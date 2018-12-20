@@ -27,6 +27,8 @@ puppeteer.launch().then(async browser => {
 
         console.log(`get ${srcArr.length} images, start download`);
         srcArr.forEach(async (src) => {
+            // sleep
+            await page.waitFor(200)
             await srcToImg(src, picture);
         })
     })

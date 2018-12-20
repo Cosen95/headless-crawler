@@ -30,6 +30,7 @@ const urlToImg = promisify((url, dir, callback) => {
 
 // base64 => image
 const base64ToImg = async function(base64Str, dir) {
+    // data:image/jpeg;base64,/sklwmopvfdv
     const matches = base64Str.match(/^data:(.+?);base64,(.+)$/);
     try {
         const ext = matches[1].split('/')[1].replace('jpeg','jpg');
