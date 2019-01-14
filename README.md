@@ -20,12 +20,14 @@
 ### puppeteer
 1.介绍
 Puppeteer  翻译是操纵木偶的人，利用这个工具，我们能做一个操纵页面的人。Puppeteer是一个Nodejs的库，支持调用Chrome的API来操纵Web，相比较Selenium或是PhantomJs,它最大的特点就是它的操作Dom可以完全在内存中进行模拟既在V8引擎中处理而不打开浏览器，而且关键是这个是Chrome团队在维护，会拥有更好的兼容性和前景。
+
 2.功能
 * 利用网页生成PDF、图片
 * 爬取SPA应用，并生成预渲染内容（即“SSR” 服务端渲染）
 * 可以从网站抓取内容
 * 自动化表单提交、UI测试、键盘输入等
 * 帮你创建一个最新的自动化测试环境（chrome），可以直接在此运行测试用例。捕获站点的时间线，以便追踪你的网站，帮助分析网站性能问题
+
 3.安装（有坑）
 `yarn add puppeteer`
 > Tip：下载 Chromium 失败解决办法
@@ -36,6 +38,7 @@ cnpm i puppeteer
 ```
 相关文档参考：`https://lzw.me/a/puppeteer-install-skip-download-chrome.html`
 `https://www.sunzhongwei.com/use-the-puppeteer-automation-chrome-chromium-operation`
+
 4.项目实战
 * 抓取百度首页截图
 `src/screenshot.js`
@@ -117,6 +120,7 @@ puppeteer.launch().then(async browser => {
 
 ## 扩展
 node.js使用puppeteer headless浏览器爬取豆瓣电影
+
 `https://blog.csdn.net/squirrelpineal/article/details/81260312`
 
 
